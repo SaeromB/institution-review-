@@ -30,9 +30,11 @@ const MainCard = () => {
           <S.Row>
             <S.Column>
               <S.Rating>
+              <S.Row>
               <img src={star} alt={'star'}/>
               <span>4.8</span>
               <span>(440)</span>
+              </S.Row>
               </S.Rating>
             </S.Column>
         </S.Row>

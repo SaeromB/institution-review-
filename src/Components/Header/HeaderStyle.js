@@ -23,8 +23,8 @@ export const HeaderContainer = styled.div`
 export const SchoolLogo = styled.div`
   img {
     width: 2.5rem;
-    align-content: center;
-    display: right;
+    align-content: left;
+    display: left;
     padding: 0.5rem;
   }
 `;
@@ -55,12 +55,13 @@ export const Row = styled.div`
 
 export const Title = styled.p`
   vertical-align: left;
+  left: 50px;
+
   font-size: 1.5rem;
   font-weight: 800;
   color: #333;
   text-decoration: unset;
   text-align: left;
-
 `
 
 

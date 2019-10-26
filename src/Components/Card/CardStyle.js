@@ -82,7 +82,6 @@ export const HogwonHashtag = styled.div`
 `;
 
 export const Bottom = styled.div`
-  margin: 1rem;
 `;
 
 export const Rating = styled.div`
