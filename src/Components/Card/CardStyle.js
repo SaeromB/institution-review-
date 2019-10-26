@@ -84,6 +84,7 @@ export const Rating = styled.div`
     margin-bottom: 0.3rem;  
   }
   span {
+    font-size: 1rem;
     vertical-align: middle;
     font-size: 1.4rem;
     font-weight: 700;
