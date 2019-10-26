@@ -54,14 +54,10 @@ export const Row = styled.div`
 `
 
 export const Title = styled.p`
-  vertical-align: left;
-  left: 50px;
-
   font-size: 1.5rem;
   font-weight: 800;
   color: #333;
   text-decoration: unset;
-  text-align: left;
 `
 
 

@@ -11,7 +11,6 @@ const Main = () => {
     <Header/>
      <section>
        <S.Container>
-        <h1>학원 10개</h1>
         <Grid
           container
           spacing={0}
