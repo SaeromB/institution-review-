@@ -1,27 +1,57 @@
 import React, {Component} from 'react';
 import Main from './View/Main/Main';
 import Review from './Components/Review/Review';
-import Header from './Components/Header/Header';
+import ReviewList from './Components/Review/ReviewList';
 
 class App extends Component {
+  inputElement = React.createRef()
   constructor() {
     super()
     this.state = {
-      items: [],
-      currentItem: {text: '', key:''},
+      reviews: [],
+      currentReview: {text: '', key:''},
     }
   }
-  handleInput = e => {
-    console.log('Hello Input')
+
+  deleteReview = key => {
+    const filteredReviews = this.state.reviews.filter(review => {
+      return review.key !== key
+    })
+    this.setState({
+    reviews: filteredReviews,
+  })
+
   }
-  addReview = () => {
-    console.log('Hello Add Review')
+  handleInput = e => {
+    const reviewText = e.target.value
+    const currentReview = {text: reviewText, key: Date.now()}
+      this.setState({
+        currentReview,
+      })
+  }
+  addReview = e => {
+    e.preventDefault()
+    const newReview = this.state.currentReview
+    if (newReview.text !== '') {
+      console.log(newReview)
+      const reviews = [...this.state.reviews, newReview]
+      this.setState({
+        reviews: reviews,
+        currentReview: {text: '', key: ''},
+      })
+    }
   }
   render() {
     return(
       <div>
         <Main/>
-        <Review addReview={this.addReview}/>
+        <Review
+         addReview={this.addReview}
+         inputElement={this.inputElement}
+         handleInput={this.handleInput}
+         currentReview={this.state.currentReview}
+        />
+        <ReviewList entries={this.state.reviews} deleteReview={this.deleteReview}/>
       </div>
     )
   }
