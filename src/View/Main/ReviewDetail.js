@@ -45,7 +45,6 @@ class ReviewDetail extends Component {
   render() {
     return(
       <div>
-        <Main/>
         <Review
          addReview={this.addReview}
          inputElement={this.inputElement}

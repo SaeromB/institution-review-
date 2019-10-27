@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as S from './ReviewStyle';
 import Header from '../Header/Header';
 
 class Reveiw extends Component {

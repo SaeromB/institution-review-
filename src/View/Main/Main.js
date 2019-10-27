@@ -4,6 +4,9 @@ import { Grid } from '@material-ui/core';
 import * as S from './MainStyle';
 import Header from '../../Components/Header/Header';
 import MainCard from '../../Components/Card/MainCard';
+import CardOne from '../../Components/Card/CardOne';
+import CardTwo from '../../Components/Card/CardTwo';
+import CardThree from '../../Components/Card/CardThree';
 
 const Main = () => {
   return(
@@ -22,13 +25,13 @@ const Main = () => {
             <MainCard/>
           </Grid>
           <Grid item xs={12} md={6}>
-            <MainCard/>
+            <CardOne/>
           </Grid>
           <Grid item xs={12} md={6}>
-            <MainCard/>
+            <CardTwo/>
           </Grid>
           <Grid item xs={12} md={6}>
-            <MainCard/>
+            <CardThree/>
           </Grid>
         </Grid>
        </S.Container>
