@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import * as S from './CardStyle';
 import hwlogo from '../Image/Hwlogo/hwlogo.png';
 import star from '../Image/Star/star.svg';
@@ -39,6 +39,8 @@ const MainCard = () => {
     </S.CardContainer>
   );
 };
+
+
 
 export default MainCard;
 

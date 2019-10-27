@@ -6,16 +6,15 @@ class Reveiw extends Component {
   render() {
     return(
       <div>
-        <Header/>
-          <form onSubmit={this.props.addReview}>
-            <input
-              placeholder = '학원리뷰를 적으세요'
-              ref={this.props.inputElement}
-              value={this.props.currentReview.text}
-              onChange={this.props.handleInput}
-            />
-            <button type='submit'>리뷰추가</button>
-          </form>
+        <form onSubmit={this.props.addReview}>
+          <input
+            placeholder = '학원리뷰를 적으세요'
+            ref={this.props.inputElement}
+            value={this.props.currentReview.text}
+            onChange={this.props.handleInput}
+          />
+          <button type='submit'>리뷰추가</button>
+        </form>
       </div>
     )
   }
