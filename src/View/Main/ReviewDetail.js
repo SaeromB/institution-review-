@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Main from './Main';
 import Header from '../../Components/Header/Header';
 import Review from '../../Components/Review/Review';
 import ReviewList from '../../Components/Review/ReviewList';
+import * as S from './ReviewDetailStyle';
 
 
 class ReviewDetail extends Component {
@@ -44,7 +44,9 @@ class ReviewDetail extends Component {
   }
   render() {
     return(
-      <div>
+    <>
+    <Header/>
+      <S.Container>
         <Review
          addReview={this.addReview}
          inputElement={this.inputElement}
@@ -52,7 +54,8 @@ class ReviewDetail extends Component {
          currentReview={this.state.currentReview}
         />
         <ReviewList entries={this.state.reviews} deleteReview={this.deleteReview}/>
-      </div>
+      </S.Container>
+    </>
     )
   }
 }

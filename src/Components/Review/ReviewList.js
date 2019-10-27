@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 class ReviewList extends Component {
   createReviews = review => {
     return(
-      <li key={review.key} 
+      <ul key={review.key} 
         onClick={() => this.props.deleteReview(review.key)}>
         {review.text}
-      </li>
+      </ul>
     )
   }
  
